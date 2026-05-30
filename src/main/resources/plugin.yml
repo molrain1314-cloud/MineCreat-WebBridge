@@ -1,0 +1,18 @@
+name: WebBridge
+version: 2.1.5
+main: com.mcplugin.WebBridgePlugin
+api-version: 1.21
+folia-supported: true
+commands:
+  molrain:
+    aliases: [mr, bind, mol]
+  unmolrain:
+    aliases: [unmr, unmol, unbind]
+  webbridge:
+    aliases: [wb]
+    permission: webbridge.admin
+permissions:
+  webbridge.use:
+    default: true
+  webbridge.admin:
+    default: op
