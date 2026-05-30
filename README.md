@@ -15,7 +15,25 @@ v2.1.5
 - 三种主题切换（黑蓝/白黄/粉白）
 - 内置H2数据库（无需安装MySQL）
 
+# WebBridge - Minecraft Server & Web Integration Plugin
+
+## 📦 Version
+v2.1.5
+
+## 🎯 Features
+- Game account binding to website (supports `/mr`, `/molrain`, `/bind`, etc.)
+- Web registration/login (with email verification code)
+- Real-time server info display (online players, registered users)
+- Chat sync (Web ↔ Game)
+- Community system (posts/categories/image upload/likes & dislikes)
+- Announcement system (carousel/publish/delete)
+- Profile center (avatar cropping/nickname/bio/password change)
+- Admin panel (user management/ban/unban/view suggestions)
+- 3 theme options (Dark Blue/White Yellow/Pink White)
+- Built-in H2 database (no MySQL required)
+
 ## 📁 项目结构
+## 📁 Project Structure
 
 WebBridge/
 ├── pom.xml
@@ -23,18 +41,18 @@ WebBridge/
 └── main/
 ├── java/
 │ └── com/mcplugin/
-│ ├── WebBridgePlugin.java # 插件主类
-│ ├── DatabaseManager.java # 数据库管理
-│ ├── MailSender.java # 邮件发送
-│ ├── ChatSyncListener.java # 聊天同步
-│ ├── WebAPIServer.java # Web服务器+API
-│ ├── BindCommand.java # 绑定命令
-│ ├── UnbindCommand.java # 解绑命令
-│ ├── PlayerListener.java # 玩家事件
-│ ├── PlayerDataSync.java # 数据同步
-│ └── AdminCommand.java # 管理命令
+│ ├── WebBridgePlugin.java # 插件主类# Main plugin class
+│ ├── DatabaseManager.java # 数据库管理# Database manager
+│ ├── MailSender.java # 邮件发送# Email sender
+│ ├── ChatSyncListener.java # 聊天同步# Chat sync listener
+│ ├── WebAPIServer.java # Web服务器+API# Web server + API
+│ ├── BindCommand.java # 绑定命令 # Bind command
+│ ├── UnbindCommand.java # 解绑命令# Unbind command
+│ ├── PlayerListener.java # 玩家事件# Player events
+│ ├── PlayerDataSync.java # 数据同步# Data sync
+│ └── AdminCommand.java # 管理命令 # Admin commands
 └── resources/
 ├── plugin.yml
 ├── config.yml
 └── web/
-└── default_avatar.png # 默认头像
+└── default_avatar.png # 默认头像 # Default avatar
