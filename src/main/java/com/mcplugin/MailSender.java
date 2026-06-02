@@ -28,17 +28,14 @@ public class MailSender {
             props.put("mail.smtp.auth", "true");
             props.put("mail.smtp.starttls.enable", "true");
             Session session = Session.getInstance(props, new Authenticator() {
-                protected PasswordAuthentication getPasswordAuthentication() {
-                    return new PasswordAuthentication(username, password);
-                }
+                protected PasswordAuthentication getPasswordAuthentication() { return new PasswordAuthentication(username, password); }
             });
             Message msg = new MimeMessage(session);
             msg.setFrom(new InternetAddress(username));
             msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toEmail));
             msg.setSubject("[" + plugin.getConfig().getString("web.title") + "] 验证码");
             msg.setText("验证码: " + code + "\n5分钟内有效");
-            Transport.send(msg);
-            return true;
+            Transport.send(msg); return true;
         } catch (Exception e) { plugin.getLogger().warning("邮件失败: " + e.getMessage()); return false; }
     }
 

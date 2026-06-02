@@ -1,11 +1,13 @@
+config-version: "26.5.30"
 web:
   port: 4567
   title: "MC服务器"
   icon: "⛏"
   about_content: "欢迎来到服务器！"
   default_avatar: "/default_avatar.png"
+  language: "zh_CN"
 mail:
-  enabled: true
+  enabled: false
   smtp_host: "smtp.qq.com"
   smtp_port: 587
   username: ""
@@ -13,7 +15,7 @@ mail:
 server:
   ip: "localhost"
   version: "1.21"
-  description: ""
+  motd: "&a欢迎来到服务器！"
 admin:
   username: "admin"
   password: "admin"

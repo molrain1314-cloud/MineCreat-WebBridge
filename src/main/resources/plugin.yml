@@ -1,18 +1,28 @@
 name: WebBridge
-version: 2.1.5
+version: 26.5.30
 main: com.mcplugin.WebBridgePlugin
 api-version: 1.21
 folia-supported: true
+author: ServerAdmin
+description: Minecraft服务器与网页数据互通插件
 commands:
   molrain:
+    description: 绑定网页账号
+    usage: /<command> <绑定码>
     aliases: [mr, bind, mol]
   unmolrain:
+    description: 解绑网页账号
+    usage: /<command> confirm
     aliases: [unmr, unmol, unbind]
   webbridge:
-    aliases: [wb]
+    description: 插件管理命令
+    usage: /<command> [reload|status|ban|unban]
     permission: webbridge.admin
+    aliases: [wb]
 permissions:
   webbridge.use:
+    description: 允许绑定/解绑
     default: true
   webbridge.admin:
+    description: 管理员权限
     default: op
